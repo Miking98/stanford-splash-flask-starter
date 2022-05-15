@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="my-4">
+		<h1>Stanford Splash</h1>
+		{% if current_user.is_authenticated %}
+			<p>Hi <strong>{{ current_user.email }}</strong></p>
+		{% endif %}
+		<p>Welcome to the Splash homepage!</p>
+		<img class="my-2" src="https://stanfordesp.org/media/images/theme/logo.png" height="200" />
+		<p>
+			The current time is: <span id="current-time">--</span>
+		</p>
+	</div>
+{% endblock %}
